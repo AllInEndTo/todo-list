@@ -24,7 +24,7 @@ const Home = () => {
     const [todos, setTodos] = useState(data)
     const changeTodo = (id) => {
         const copy = [...todos]
-        const current = copy.find(t => t._id === id).isCompleted
+        const current = copy.find(t => t._id === id)
         current.isCompleted = !current.isCompleted
         setTodos(copy)
     }
@@ -36,10 +36,11 @@ const Home = () => {
         <div className={"text-white w-4/5 mx-auto"}>
             <h1 className={'text-2xl font-bold text-center mb-4'}>Your personal To-Do List</h1>
             {todos.map(todo => (
-                <TodoItem key={todo._id}
-                          todo={todo}
-                          changeTodo={changeTodo}
-                          removeTodo={removeTodo}
+                <TodoItem
+                    key={todo._id}
+                    todo={todo}
+                    changeTodo={changeTodo}
+                    removeTodo={removeTodo}
                 />
             ))}
             <CreateTodoField setTodos={setTodos}/>

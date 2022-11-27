@@ -7,9 +7,9 @@ import {BsTrash} from 'react-icons/bs'
 const TodoItem = ({todo, changeTodo, removeTodo}) => {
     return (
         <div className={'flex items-center justify-between mb-4 rounded-3xl bg-gray-800 ' +
-            'p-5 w-full'}
-            onClick={() => changeTodo(todo._id)}>
-            <button className={'flex items-center'}>
+            'p-5 w-full'}>
+            <button className={'flex items-center'}
+                    onClick={() => changeTodo(todo._id)}>
             <Check isCompleted={todo.isCompleted}/>
             <span className={cn({
                 'line-through': todo.isCompleted,
