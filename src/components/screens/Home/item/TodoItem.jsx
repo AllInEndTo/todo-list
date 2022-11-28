@@ -6,7 +6,7 @@ import {BsTrash} from 'react-icons/bs'
 
 const TodoItem = ({todo, changeTodo, removeTodo}) => {
     return (
-        <div className={'flex items-center justify-between mb-4 rounded-3xl bg-gray-800 ' +
+        <div className={'flex items-center justify-between mb-4 rounded-3xl bg-slate-700 ' +
             'p-5 w-full'}>
             <button className={'flex items-center'}
                     onClick={() => changeTodo(todo._id)}>
@@ -17,7 +17,7 @@ const TodoItem = ({todo, changeTodo, removeTodo}) => {
             </span>
             </button>
             <button onClick={() => removeTodo(todo._id)}>
-            <BsTrash size={22} className={'text-amber-400 hover:text-blue-700 ' +
+            <BsTrash size={22} className={'text-slate-300 hover:text-emerald-300 ' +
                 'transition-colors ease-in-out duration-300'}/>
             </button>
         </div>

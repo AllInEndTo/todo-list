@@ -14,7 +14,7 @@ const CreateTodoField = ({setTodos}) => {
     }
 
     return (
-        <div className={'flex items-center justify-between mb-4 rounded-3xl bg-gray-800 border-2 p-5 w-full mt-20'}>
+        <div className={'flex items-center justify-between mb-4 rounded-3xl bg-slate-700 border-2 p-5 w-full mt-20'}>
             <input type={'text'}
                    onChange={e => setTitle(e.target.value)}
                    value={title}
